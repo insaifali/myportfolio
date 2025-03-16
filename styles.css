@@ -186,28 +186,44 @@ nav ul li a:hover {
     color: #3498db;
 }
 
-/* Hamburger Menu */
-.hamburger-menu {
+/* Hamburger Box */
+.hamburger-box {
     display: none; /* Hidden by default */
     position: fixed;
     top: 0; /* Position at the top */
     left: 0; /* Stretch from the left */
     right: 0; /* Stretch to the right */
     width: 100%; /* Full width */
-    font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
-    z-index: 1002;
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     padding: 10px 20px; /* Padding for the box */
     border-radius: 0 0 20px 20px; /* Curved corners at the bottom */
-    transition: background 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a shadow */
-    text-align: right; /* Align the icon to the right */
+    text-align: right; /* Align the button to the right */
+    z-index: 1002; /* Ensure it's above other content */
 }
 
-.hamburger-menu:hover {
-    background: rgba(0, 0, 0, 0.9); /* Darker background on hover */
+/* Hamburger Button */
+.hamburger-button {
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    color: white; /* Icon color */
+    font-size: 1.5rem; /* Icon size */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 5px 10px; /* Padding for the button */
+    border-radius: 5px; /* Slightly rounded corners for the button */
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.hamburger-button:hover {
+    background: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    /* Show hamburger box on mobile */
+    .hamburger-box {
+        display: block;
+    }
 }
 
 /* Navigation and Resume Button Container (Mobile) */
@@ -374,6 +390,49 @@ nav ul li a:hover {
         z-index: 1001;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
+}
+
+/* Remove blue highlight on buttons and links */
+button, a {
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+    outline: none; /* Remove focus outline */
+}
+
+
+/* Hamburger Button */
+.hamburger-button {
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    color: white; /* Icon color */
+    font-size: 1.5rem; /* Icon size */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 5px 10px; /* Padding for the button */
+    border-radius: 5px; /* Slightly rounded corners for the button */
+    transition: background 0.3s ease; /* Smooth background transition */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight */
+    outline: none; /* Remove focus outline */
+}
+
+.hamburger-button:hover {
+    background: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+/* Project Links */
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight */
+    outline: none; /* Remove focus outline */
+}
+
+.project-link:hover {
+    background: #2980b9;
 }
 
 /* Main Content */
