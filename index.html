@@ -26,10 +26,13 @@
         </div>
     </header>
 
-    <!-- Hamburger Menu Icon -->
-    <div class="hamburger-menu" id="hamburger-menu">
+    <!-- Hamburger Menu Box -->
+<div class="hamburger-box" id="hamburger-box">
+    <!-- Hamburger Button -->
+    <button class="hamburger-button" id="hamburger-button">
         <i class="fas fa-bars"></i>
-    </div>
+    </button>
+</div>
 
     <!-- Navigation and Resume Button Container (Mobile) -->
     <div class="nav-resume-container" id="nav-resume-container">
@@ -49,7 +52,7 @@
     <!-- Default Navigation Bar and Resume Button (Desktop) -->
     <nav class="desktop-nav">
         <ul>
-            <li><a href="#about1">ABOUT ME</a></li>
+            <li><a href="#about">ABOUT ME</a></li>
             <li><a href="#projects">PROJECTS</a></li>
             <li><a href="#contact">CONTACT</a></li>
         </ul>
@@ -167,7 +170,7 @@
             <h3>Portfolio Website</h3>
             <p>A Portfolio Website built using plain HTML, CSS & JavaScript.</p><br>
             <p>12/2024 - 02/2025</p>
-            <a href="https://github.com/insaifali/myportfolio" class="project-link" target="_blank">View Project</a>
+            <a href="https://insaifali.github.io/portfolio.github.io" class="project-link" target="_blank">View Project</a>
         </div>
     </div>
 </section>
@@ -218,22 +221,22 @@
     <script src="script.js"></script>
 
     <script>
-        // Hamburger Menu Toggle
+        // Hamburger Button Toggle
         document.addEventListener('DOMContentLoaded', function () {
-            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const hamburgerButton = document.getElementById('hamburger-button');
             const navResumeContainer = document.getElementById('nav-resume-container');
 
-            // Toggle hamburger menu
-            hamburgerMenu.addEventListener('click', () => {
+            hamburgerButton.addEventListener('click', () => {
                 navResumeContainer.classList.toggle('active');
             });
 
             // Close the menu when clicking outside
             document.addEventListener('click', (event) => {
-                if (!hamburgerMenu.contains(event.target) && !navResumeContainer.contains(event.target)) {
+                if (!hamburgerButton.contains(event.target) && !navResumeContainer.contains(event.target)) {
                     navResumeContainer.classList.remove('active');
                 }
             });
+        
 
             // Close the menu when a nav link is clicked
             const navLinks = document.querySelectorAll('.nav-resume-container nav ul li a');
