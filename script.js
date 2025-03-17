@@ -90,6 +90,23 @@ style.innerHTML = `
     .light-mode .footer-social a {
         color: #333; 
     }
+        
+    /* Hamburger Menu in Light Mode */
+    .light-mode .hamburger-box {
+        background: rgba(255, 255, 255, 0.9); /* Light background for hamburger box */
+    }
+    .light-mode .hamburger-button {
+        color: #333; /* Dark icon color in light mode */
+    }
+    .light-mode .nav-resume-container {
+        background: rgba(255, 255, 255, 0.95); /* Light background for menu */
+    }
+    .light-mode .nav-resume-container nav ul li a {
+        color: #333; /* Dark text color in light mode */
+    }
+    .light-mode .nav-resume-container nav ul li a:hover {
+        color: #3498db; /* Change text color on hover */
+    }
 `;
 document.head.appendChild(style);
 
